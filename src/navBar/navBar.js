@@ -14,6 +14,7 @@ const createNavItem = name => {
     navItem.href = "*";
     navItem.textContent = name;
     navItem.className = "nav-item";
+    navItem.id = name.toLowerCase();
 
     return navItem;
 }
