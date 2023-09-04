@@ -41,9 +41,37 @@ const createRightContent = () => {
 const createBottomContent = () => {
     const bottomContent = document.createElement("div");
     bottomContent.className = "bottom-content";
-    bottomContent.textContent = "bottom";
+    
+    const title = document.createElement("div");
+    title.className = "bottom-title";
+    title.textContent = "Why My Sushi?"
+    bottomContent.appendChild(title);
+
+    const cardsWrapper = document.createElement("div");
+    cardsWrapper.className = "cards-wrapper";
+    cardsWrapper.appendChild(createCard("Hot Deals & Offers", "We want to show you some love by giving you discount off food in our restaurants."));
+    cardsWrapper.appendChild(createCard("Self Pick-Up", "Self Pick-up is a service which allows you to place Self Pick-up orders through our App."));
+    cardsWrapper.appendChild(createCard("Fastest Delivery", "Choose your food. We will deliver to you as fast as we can. Download the app and enjoy our food."));
+    bottomContent.appendChild(cardsWrapper);
 
     return bottomContent;
+}
+
+const createCard = (title, content) => {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    const cardTitle = document.createElement("div");
+    cardTitle.className = "card-title";
+    cardTitle.textContent = title;
+    card.appendChild(cardTitle);
+    
+    const cardContent = document.createElement("div");
+    cardContent.className = "card-content";
+    cardContent.textContent = content;
+    card.appendChild(cardContent);
+
+    return card;
 }
 
 const createHomePage = () => {
