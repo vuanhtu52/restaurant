@@ -1,7 +1,14 @@
 import createNavBar from "./navBar/navBar";
+import createHomePage from "./homePage/homePage";
 import "./style.css"
 
-const content = document.querySelector("#content");
+const loadPage = () => {
+    const content = document.querySelector("#content");
+    content.appendChild(createNavBar());
 
+    const homePage = createHomePage();
+    content.appendChild(homePage);
+}
 
-content.appendChild(createNavBar());
+loadPage();
+

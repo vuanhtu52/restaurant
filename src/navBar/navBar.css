@@ -1,25 +1,25 @@
-.navBar {
+.nav-bar {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 20px;
+    padding: 20px 50px;
     background-color: #fffbeb;
 }
 
 .logo {
     font-size: 40px;
-    font-family: 'Montserrat', cursive;
+    font-family: "Montserrat", cursive;
     text-decoration: none;
     color: black;
     font-weight: 900;
 }
 
-.navItems {
+.nav-items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 
-.navItem {
+.nav-item {
     display: flex;
     justify-content: center;
     align-items: center;

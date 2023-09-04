@@ -13,7 +13,7 @@ const createNavItem = name => {
     const navItem = document.createElement("a");
     navItem.href = "*";
     navItem.textContent = name;
-    navItem.className = "navItem";
+    navItem.className = "nav-item";
 
     return navItem;
 }
@@ -21,7 +21,7 @@ const createNavItem = name => {
 const createNavBar = () => {
     // Create the navbar
     const navBar = document.createElement("div");
-    navBar.className = "navBar";
+    navBar.className = "nav-bar";
 
     // Add logo
     const logo = createLogo();
@@ -29,12 +29,12 @@ const createNavBar = () => {
 
     // Add nav items
     const navItems = document.createElement("div");
-    navItems.className = "navItems";
+    navItems.className = "nav-items";
     navItems.appendChild(createNavItem("Home"));
     navItems.appendChild(createNavItem("Menu"));
     navItems.appendChild(createNavItem("Contact"));
     navBar.appendChild(navItems);
-    
+
     return navBar;
 };
 

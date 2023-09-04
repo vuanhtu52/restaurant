@@ -3,3 +3,9 @@ body {
     margin: 0;
 }
 
+#content {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+}
+
