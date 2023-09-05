@@ -21,6 +21,10 @@ const switchPage = pageId => {
 const setNavBar = navBar => {
     const navItems = navBar.querySelectorAll(".nav-item");
     navItems.forEach(navItem => {
+        // Set home element active at the beginning
+        if (navItem.id === "home") {
+            navItem.className = "nav-item active";
+        }
         navItem.addEventListener("click", event => {
             // Prevent a tag from navigating
             event.preventDefault();
