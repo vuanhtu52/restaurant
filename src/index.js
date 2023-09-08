@@ -45,7 +45,10 @@ const setNavBar = navBar => {
 }
 
 const loadPage = () => {
-    const content = document.querySelector("#content");
+    // const content = document.querySelector("#content");
+    const content = document.createElement("div");
+    content.id = "content";
+    document.body.appendChild(content);
 
     const navBar = createNavBar();
     setNavBar(navBar);
